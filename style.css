@@ -1852,3 +1852,58 @@ textarea.form-control {
     align-items: flex-start;
   }
 }
+
+/* ==========================================================================
+   LANGUAGE SWITCHER & TRANSLATION SYSTEM
+   ========================================================================== */
+html[lang="es"] .lang-en {
+  display: none !important;
+}
+
+html[lang="en"] .lang-es {
+  display: none !important;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.lang-switch-pill {
+  display: flex;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 2px;
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+}
+
+.lang-pill-item {
+  padding: 4px 10px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 0.75rem;
+  border-radius: 18px;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  color: var(--text-muted);
+}
+
+.lang-pill-item:hover {
+  color: var(--text-white);
+}
+
+.lang-pill-item.active {
+  background: var(--accent-gradient-primary);
+  color: #030712;
+  box-shadow: 0 0 10px rgba(0, 242, 254, 0.3);
+}
+
+@media (max-width: 768px) {
+  .header-right {
+    gap: 15px;
+  }
+}
+
